@@ -1,3 +1,8 @@
+2023-09-21  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-skeleton-write-region): Fix missing comma.
+	(Bug#66123)
+
 2023-09-16  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-otp-password-prompt-regexp): New defcustom.
