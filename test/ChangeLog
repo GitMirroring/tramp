@@ -2,11 +2,7 @@
 
 	* tramp-tests.el (tramp--test-deftest-direct-async-process)
 	(tramp-test30-make-process): Improve Emacs 30 compatibility.
-
-mm2023-09-25  Michael Albinus  <michael.albinus@gmx.de>
-
-	* tramp-tests.el (tramp-test46-read-password): Use `copy-tree' but
-	`copy-sequence'.
+	(tramp-test46-read-password): Use `copy-tree' but `copy-sequence'.
 	(tramp-test46-read-otp-password): New test.
 
 2023-08-30  Michael Albinus  <michael.albinus@gmx.de>
