@@ -1,3 +1,7 @@
+2023-11-17  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp--test-timeout-handler): Be more verbose.
+
 2023-10-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.6.1.4 released.
