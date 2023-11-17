@@ -104,8 +104,8 @@
 
 (defun tramp-fuse-handle-file-name-all-completions (filename directory)
   "Like `file-name-all-completions' for Tramp files."
-   (tramp-skeleton-file-name-all-completions filename directory
-     (tramp-fuse-remove-hidden-files
+  (tramp-skeleton-file-name-all-completions filename directory
+    (tramp-fuse-remove-hidden-files
      (all-completions
       filename
       (append
