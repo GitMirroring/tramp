@@ -1,7 +1,6 @@
 2023-12-07  Michael Albinus  <michael.albinus@gmx.de>
 
-	* tramp.el (tramp-skeleton-directory-files)
-	(tramp-skeleton-make-symbolic-link):
+	* tramp.el (tramp-skeleton-directory-files):
 	* tramp-cache.el (with-tramp-saved-file-property)
 	(with-tramp-saved-file-properties)
 	(with-tramp-saved-connection-property)
