@@ -6366,8 +6366,6 @@ INPUT, if non-nil, is a string sent to the process."
          (tramp-remote-path tramp-remote-path)
 	 (orig-tramp-remote-path tramp-remote-path)
 	 path)
-    ;; The "flatpak" method modifies `tramp-remote-path'.
-    (skip-unless (not (tramp-compat-connection-local-p tramp-remote-path)))
     (unwind-protect
 	(progn
           ;; Non existing directories are removed.
