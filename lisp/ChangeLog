@@ -1,3 +1,13 @@
+2024-02-09  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-security-key-pin-regexp): New defcustom.
+	(tramp-action-otp-password, tramp-read-passwd): Trim password prompt.
+	(tramp-action-show-and-confirm-message): Expand for PIN requests.
+
+	* tramp-sh.el (tramp-actions-before-shell)
+	(tramp-actions-copy-out-of-band):
+	Use `tramp-security-key-pin-regexp'.
+
 2024-02-01  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-do-copy-or-rename-file-out-of-band):
