@@ -1,3 +1,7 @@
+2024-02-14  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el: Adapt comments.
+
 2024-02-09  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-security-key-pin-regexp): New defcustom.
