@@ -1,3 +1,8 @@
+2024-11-10  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-read-passwd): Check for `auth-sources' being
+	non-nil.
+
 2024-11-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-convert-file-attributes): Don't cache
