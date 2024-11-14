@@ -68,10 +68,10 @@
 
 ;; Some properties are handled special:
 ;;
-;; - "process-name", "process-buffer" and "first-password-request" are
-;;   not saved in the file `tramp-persistency-file-name', although
-;;   being connection properties related to a `tramp-file-name'
-;;   structure.
+;; - "process-name", "process-buffer", "first-password-request" and
+;;   "pw-spec" are not saved in the file
+;;   `tramp-persistency-file-name', although being connection
+;;   properties related to a `tramp-file-name' structure.
 ;;
 ;; - Reusable properties, which should not be saved, are kept in the
 ;;   process key retrieved by `tramp-get-process' (the main connection
@@ -581,7 +581,8 @@ PROPERTIES is a list of file properties (strings)."
 	       (progn
 		 (remhash "process-name" value)
 		 (remhash "process-buffer" value)
-		 (remhash "first-password-request" value))
+		 (remhash "first-password-request" value)
+		 (remhash "pw-spec" value))
 	     (remhash key cache)))
 	 cache)
 	;; Dump it.
