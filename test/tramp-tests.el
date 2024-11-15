@@ -8117,31 +8117,32 @@ process sentinels.  They shall not disturb each other."
       ;; Checking session-timeout.
       (with-no-warnings (when (symbol-plist 'ert-with-temp-file)
 	(tramp-cleanup-connection tramp-test-vec 'keep-debug)
-	(setcdr mock-entry
-		(append '((tramp-session-timeout 1))
-			(cdr mock-entry)))
-	(setq mocked-input nil)
-	(auth-source-forget-all-cached)
-	(ert-with-temp-file netrc-file
-	  :prefix "tramp-test" :suffix ""
-	  :text (format
-		 "machine %s port mock password %s"
-		 (file-remote-p ert-remote-temporary-file-directory 'host) pass)
-	  (let ((auth-sources `(,netrc-file)))
-	    (should (file-exists-p ert-remote-temporary-file-directory))))
-	;; Session established, password cached.
-	(should
-	 (password-in-cache-p
-	  (auth-source-format-cache-entry
-	   (tramp-get-connection-property tramp-test-vec "pw-spec"))))
-	;; We want to see the timeout message.
-	(tramp--test-instrument-test-case 3
-	  (sleep-for 2))
-	;; Session cancelled, no password in cache.
-	(should-not
-	 (password-in-cache-p
-	  (auth-source-format-cache-entry
-	   (tramp-get-connection-property tramp-test-vec "pw-spec")))))))))
+	(let ((tramp-connection-properties
+	       (cons '(nil "session-timeout" 1)
+		     tramp-connection-properties)))
+	  (setq mocked-input nil)
+	  (auth-source-forget-all-cached)
+	  (ert-with-temp-file netrc-file
+	    :prefix "tramp-test" :suffix ""
+	    :text (format
+		   "machine %s port mock password %s"
+		   (file-remote-p ert-remote-temporary-file-directory 'host)
+		   pass)
+	    (let ((auth-sources `(,netrc-file)))
+	      (should (file-exists-p ert-remote-temporary-file-directory))))
+	  ;; Session established, password cached.
+	  (should
+	   (password-in-cache-p
+	    (auth-source-format-cache-entry
+	     (tramp-get-connection-property tramp-test-vec "pw-spec"))))
+	  ;; We want to see the timeout message.
+	  (tramp--test-instrument-test-case 3
+	    (sleep-for 2))
+	  ;; Session cancelled, no password in cache.
+	  (should-not
+	   (password-in-cache-p
+	    (auth-source-format-cache-entry
+	     (tramp-get-connection-property tramp-test-vec "pw-spec"))))))))))
 
 (ert-deftest tramp-test47-read-otp-password ()
   "Check Tramp one-time password handling."

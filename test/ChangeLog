@@ -1,3 +1,9 @@
+2024-11-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test47-read-password):
+	Let-bind `tramp-connection-properties' instead of modifying
+	`tramp-methods'.
+
 2024-11-14  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (auth-source-cache-expiry): Set to nil.
