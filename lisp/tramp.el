@@ -5810,7 +5810,7 @@ Wait, until the connection buffer changes."
 	  ;; Hide message in buffer.
 	  (narrow-to-region (point-max) (point-max))
 	  ;; Wait for new output.
-	  (while (length= (buffer-string) 0)
+	  (while (tramp-compat-length= (buffer-string) 0)
 	    (tramp-accept-process-output proc))))))
   t)
 
