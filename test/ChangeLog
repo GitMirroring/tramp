@@ -1,3 +1,7 @@
+2024-11-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	Version 2.7.1.5 released
+
 2024-11-26  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test47-read-fingerprint): New test.
@@ -28,7 +32,7 @@
 	(tramp--test-deftest-direct-async-process): Skip if underlying
 	test didn't run or lasted too long.
 	(tramp-test32-shell-command): Use `async-shell-command-width' of 512.
-	(tramp-test36-vc-registered): Remove double let* entry.
+	(tramp-test36-vc-registered): Remove double `let*' entry.
 
 2024-10-30  Michael Albinus  <michael.albinus@gmx.de>
 
