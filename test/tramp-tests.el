@@ -181,6 +181,7 @@ A resource file is in the resource directory as per
 
 (setq auth-source-cache-expiry nil
       auth-source-save-behavior nil
+      ert-batch-backtrace-right-margin nil
       password-cache-expiry nil
       remote-file-name-inhibit-cache nil
       tramp-allow-unsafe-temporary-files t
