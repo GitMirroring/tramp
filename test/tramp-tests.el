@@ -6982,7 +6982,7 @@ INPUT, if non-nil, is a string sent to the process."
 	      (with-no-warnings (lock-file tmp-name1)))
 	    (should (stringp (with-no-warnings (file-locked-p tmp-name1))))
 
-	    ;; Quit the file lock machinery.  The are problems with
+	    ;; Quit the file lock machinery.  There are problems with
 	    ;; "sftp" and "podman", so we test on Emacs 29.1 only.
 	    (when (tramp--test-emacs29-p )
 	      (tramp-cleanup-connection tramp-test-vec 'keep-debug 'keep-password)
