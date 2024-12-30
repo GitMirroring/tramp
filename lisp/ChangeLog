@@ -1,5 +1,7 @@
 2024-12-30  Michael Albinus  <michael.albinus@gmx.de>
 
+	Version 2.7.2 released
+
 	* tramp-archive.el (tramp-archive-local-file-name):
 	Add `tramp-archive-method' to `tramp-methods' temporarily.
 
