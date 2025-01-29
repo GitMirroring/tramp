@@ -1,3 +1,7 @@
+2025-01-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-compat.el (tramp-compat-temporary-file-directory): Simplify.
+
 2025-01-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-get-remote-pipe-buf): Make it more robust.
