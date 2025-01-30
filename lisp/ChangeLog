@@ -1,3 +1,7 @@
+2025-01-30  Michael Albinus  <michael.albinus@gmx.de>
+
+	Version 2.7.2.1 released
+
 2025-01-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-compat.el (tramp-compat-temporary-file-directory): Simplify.
