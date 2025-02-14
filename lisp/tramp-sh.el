@@ -319,6 +319,8 @@ The string is used in `tramp-methods'.")
               `("plink"
                 (tramp-login-program        "plink")
                 (tramp-login-args           (("-l" "%u") ("-P" "%p") ("-ssh") ("%c")
+					     ;; Since PuTTY 0.82.
+					     ("-legacy-stdio-prompts")
 					     ("-t") ("%h") ("\"")
 				             (,(format
 				                "env 'TERM=%s' 'PROMPT_COMMAND=' 'PS1=%s'"
@@ -332,6 +334,8 @@ The string is used in `tramp-methods'.")
               `("plinkx"
                 (tramp-login-program        "plink")
                 (tramp-login-args           (("-load") ("%h") ("%c") ("-t") ("\"")
+					     ;; Since PuTTY 0.82.
+					     ("-legacy-stdio-prompts")
 				             (,(format
 				                "env 'TERM=%s' 'PROMPT_COMMAND=' 'PS1=%s'"
 				                tramp-terminal-type
@@ -344,6 +348,8 @@ The string is used in `tramp-methods'.")
               `("pscp"
                 (tramp-login-program        "plink")
                 (tramp-login-args           (("-l" "%u") ("-P" "%p") ("-ssh") ("%c")
+					     ;; Since PuTTY 0.82.
+					     ("-legacy-stdio-prompts")
 					     ("-t") ("%h") ("\"")
 				             (,(format
 				                "env 'TERM=%s' 'PROMPT_COMMAND=' 'PS1=%s'"
@@ -355,6 +361,8 @@ The string is used in `tramp-methods'.")
                 (tramp-remote-shell-args    ("-c"))
                 (tramp-copy-program         "pscp")
                 (tramp-copy-args            (("-l" "%u") ("-P" "%p") ("-scp")
+					     ;; Since PuTTY 0.82.
+					     ("-legacy-stdio-prompts")
 					     ("-p" "%k") ("-q") ("-r")))
                 (tramp-copy-keep-date       t)
                 (tramp-copy-recursive       t)))
@@ -362,6 +370,8 @@ The string is used in `tramp-methods'.")
               `("psftp"
                 (tramp-login-program        "plink")
                 (tramp-login-args           (("-l" "%u") ("-P" "%p") ("-ssh") ("%c")
+					     ;; Since PuTTY 0.82.
+					     ("-legacy-stdio-prompts")
 					     ("-t") ("%h") ("\"")
 				             (,(format
 				                "env 'TERM=%s' 'PROMPT_COMMAND=' 'PS1=%s'"
@@ -373,6 +383,8 @@ The string is used in `tramp-methods'.")
                 (tramp-remote-shell-args    ("-c"))
                 (tramp-copy-program         "pscp")
                 (tramp-copy-args            (("-l" "%u") ("-P" "%p") ("-sftp")
+					     ;; Since PuTTY 0.82.
+					     ("-legacy-stdio-prompts")
 					     ("-p" "%k")))
                 (tramp-copy-keep-date       t)))
 
