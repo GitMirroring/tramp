@@ -1,6 +1,8 @@
 2025-02-27  Michael Albinus  <michael.albinus@gmx.de>
 
-	* tramp.el (tramp-mode): Set to nil on MS-DOS,
+	Version 2.7.2.2 released
+
+	* tramp.el (tramp-mode): Set to nil on MS-DOS.
 
 2025-02-25  Michael Albinus  <michael.albinus@gmx.de>
 
