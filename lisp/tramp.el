@@ -120,9 +120,8 @@
   :version "22.1"
   :link '(custom-manual "(tramp)Top"))
 
-;; On MS-DOS, there is no process support.
 ;;;###autoload
-(defcustom tramp-mode (not (eq system-type 'ms-dos))
+(defcustom tramp-mode (fboundp 'make-process) ; Disable on MS-DOS.
   "Whether Tramp is enabled.
 If it is set to nil, all remote file names are used literally."
   :type 'boolean)
