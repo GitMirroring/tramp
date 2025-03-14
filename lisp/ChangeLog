@@ -1,3 +1,7 @@
+2025-03-14  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-cmds.el (tramp-revert-buffer-with-sudo): Preserve position.
+
 2025-03-10  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el: Add Version, Package-Requires, Package-Type and URL
