@@ -1,3 +1,10 @@
+2025-03-16  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (vc-handled-backends): Suppress only if noninteractive.
+	(tramp-test11-copy-file, tramp-test12-rename-file)
+	(tramp-test18-file-attributes, tramp-test21-file-links)
+	(tramp--test-check-files): Adapt tests.
+
 2025-02-27  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.7.2.2 released
