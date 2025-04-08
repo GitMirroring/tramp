@@ -1,3 +1,7 @@
+2025-04-08  Michael Albinus  <michael.albinus@gmx.de>
+
+	Version 2.7.2.3.1 released
+
 2025-04-06  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-cache.el (with-tramp-saved-connection-property): Fix typo.
