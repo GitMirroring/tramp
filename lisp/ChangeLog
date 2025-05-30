@@ -1,3 +1,7 @@
+2025-05-30  Michael Albinus  <michael.albinus@gmx.de>
+
+	Version 2.7.2.4 released
+
 2025-05-18  Michael Albinus  <michael.albinus@gmx.de>
 
 	* trampver.el.in (customize-package-emacs-version-alist):
