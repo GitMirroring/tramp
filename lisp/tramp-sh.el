@@ -5128,6 +5128,7 @@ Goes through the list `tramp-inline-compress-commands'."
 
    (t "-3")))
 
+;;;###tramp-autoload
 (defun tramp-timeout-session (vec)
   "Close the connection VEC after a session timeout.
 If there is just some editing, retry it after 5 seconds."

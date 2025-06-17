@@ -18,6 +18,8 @@
 	* tramp-rclone.el (tramp-rclone-maybe-open-connection):
 	Set "connected" property in time.
 
+	* tramp-sh.el (tramp-timeout-session): Add ;;;###tramp-autoload cookie.
+
 2025-05-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.7.2.4 released
