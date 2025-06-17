@@ -83,7 +83,6 @@
 (defvar dired-copy-dereference)
 
 ;; Declared in Emacs 30.
-;; Declared in Emacs 30.1.
 (defvar project-mode-line)
 (defvar remote-file-name-access-timeout)
 (defvar remote-file-name-inhibit-delete-by-moving-to-trash)
