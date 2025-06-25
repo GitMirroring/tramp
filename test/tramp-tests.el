@@ -8387,7 +8387,8 @@ process sentinels.  They shall not disturb each other."
 		    ;; not connected.
 		    (project-mode-line-format)
 		    ;; Steal the file lock.
-		    (cl-letf (((symbol-function #'ask-user-about-lock) #'always))
+		    (cl-letf (((symbol-function #'ask-user-about-lock)
+			       #'tramp-compat-always))
 		      (save-buffer)))
 		  (should-not
 		   (string-match-p "File is missing:" captured-messages))))))
