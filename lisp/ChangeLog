@@ -1,3 +1,9 @@
+2025-08-16  Toru TSUNEYOSHI  <t_tuneyosi@hotmail.com>
+
+	* tramp-sh.el (tramp-get-remote-touch): Set connection property
+	"touch-h".
+	(tramp-sh-handle-set-file-times): Use it.
+
 2025-08-07  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-skeleton-file-name-all-completions): Filter out
