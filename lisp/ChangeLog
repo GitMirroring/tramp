@@ -1,6 +1,13 @@
 2026-02-22  Michael Albinus  <michael.albinus@gmx.de>
 
-	* tramp.el (tramp-signal-hook-function): Extend docstring.
+	* tramp.el (tramp-methods, tramp-signal-hook-function): Extend docstring.
+
+	* tramp-sh.el (tramp-methods) <scp, scpx, rsync, ssh, sshx>:
+	Adapt `tramp-login-args' argument.  (Bug#80464)
+	(tramp-ssh-setenv-term): New defvar.
+	(tramp-ssh-setenv-term): New defun.
+	(tramp-do-copy-or-rename-file-out-of-band)
+	(tramp-maybe-open-connection): Use it.
 
 2026-02-12  Michael Albinus  <michael.albinus@gmx.de>
 
