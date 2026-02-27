@@ -1,11 +1,19 @@
+2026-02-27  Michael Albinus  <michael.albinus@gmx.de>
+
+	Version 2.8.1.2 released
+
+	* tramp-tests.el (tramp--test-make-temp-prefix): New defun.
+	(tramp--test-make-temp-name): Use it.
+	(tramp-test26-file-name-completion): Adapt test.
+
 2026-02-12  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-archive-tests.el (tramp-archive-test20-file-modes)
-	(tramp-archive-test21-file-links): Check for `rmote-file-error'.
+	(tramp-archive-test21-file-links): Check for `remote-file-error'.
 
 	* tramp-tests.el (tramp-file-name-with-sudo): Declare.
 	(tramp--test-ignore-make-symbolic-link-error): Check for
-	`rmote-file-error'.
+	`remote-file-error'.
 	(tramp-test03-file-name-method-rules): Delete.
 	(tramp-test03-file-error): New test.
 	(tramp--test-supports-processes-p): Make it more rebust.

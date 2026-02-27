@@ -167,16 +167,22 @@
 (defconst tramp-test-name-prefix "tramp-test"
   "Prefix to use for temporary test files.")
 
+(defun tramp--test-make-temp-prefix (&optional local quoted)
+  "Return a temporary file name prefix for test.
+If LOCAL is non-nil, a local file name is returned.
+If QUOTED is non-nil, the local part of the file name is quoted."
+  (funcall
+   (if quoted #'file-name-quote #'identity)
+   (expand-file-name
+    tramp-test-name-prefix
+    (if local temporary-file-directory ert-remote-temporary-file-directory))))
+
 (defun tramp--test-make-temp-name (&optional local quoted)
   "Return a temporary file name for test.
 If LOCAL is non-nil, a local file name is returned.
 If QUOTED is non-nil, the local part of the file name is quoted.
 The temporary file is not created."
-  (funcall
-   (if quoted #'file-name-quote #'identity)
-   (expand-file-name
-    (make-temp-name tramp-test-name-prefix)
-    (if local temporary-file-directory ert-remote-temporary-file-directory))))
+  (make-temp-name (tramp--test-make-temp-prefix local quoted)))
 
 ;; Method "smb" supports `make-symbolic-link' only if the remote host
 ;; has CIFS capabilities.  tramp-adb.el, tramp-gvfs.el, tramp-rclone.el
@@ -4960,14 +4966,10 @@ This tests also `make-symbolic-link', `file-truename' and `add-name-to-file'."
 
   (dolist (non-essential '(nil t))
     (dolist (quoted (if (tramp--test-expensive-test-p) '(nil t) '(nil)))
-      (let ((tramp-fuse-remove-hidden-files t)
-	    (tmp-name (tramp--test-make-temp-name nil quoted)))
-
-	(unwind-protect
-	    (progn
+      (ert-with-temp-directory tmp-name
+	:prefix (tramp--test-make-temp-prefix nil quoted) :suffix ""
+	(let ((tramp-fuse-remove-hidden-files t))
 	      ;; Local files.
-	      (make-directory tmp-name)
-	      (should (file-directory-p tmp-name))
 	      (write-region "foo" nil (expand-file-name "foo" tmp-name))
 	      (should (file-exists-p (expand-file-name "foo" tmp-name)))
 	      (write-region "bar" nil (expand-file-name "bold" tmp-name))
@@ -5024,10 +5026,7 @@ This tests also `make-symbolic-link', `file-truename' and `add-name-to-file'."
 		(should
 		 (equal
 		  (sort (file-name-all-completions "" tmp-name) #'string-lessp)
-		  '("../" "./" "bold" "boz/" "foo" "foo.ext")))))
-
-	  ;; Cleanup.
-	  (ignore-errors (delete-directory tmp-name 'recursive)))))))
+		  '("../" "./" "bold" "boz/" "foo" "foo.ext")))))))))
 
 (tramp--test-deftest-with-perl tramp-test26-file-name-completion)
 
