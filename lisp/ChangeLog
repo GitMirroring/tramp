@@ -1,3 +1,13 @@
+2026-03-01  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-get-connection-local-criteria): New defsubst.
+	(tramp-set-connection-local-variables): Use it.
+	(tramp-set-connection-local-variables-for-buffer):
+	Use `connection-local-criteria-for-default-directory'.
+
+	* tramp-sh.el (tramp-open-connection-setup-interactive-shell):
+	Set connection-local value of `command-line-max-length'.
+
 2026-02-27  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.1.2 released
