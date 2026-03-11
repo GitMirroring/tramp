@@ -1,3 +1,13 @@
+2026-03-11  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (ert-temp-file-prefix, ert-temp-file-suffix)
+	(ert--with-temp-file-generate-suffix, ert-with-temp-file)
+	(ert-with-temp-directory): Add them if they don't exist.
+	(tramp--test-kubernetes-p)
+	(tramp--test-supports-set-file-times-p): New defuns.
+	(tramp-test03-file-error, tramp-test20-file-modes)
+	(tramp-test22-file-times): Adapt tests.
+
 2026-02-27  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.1.2 released
