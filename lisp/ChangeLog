@@ -1,3 +1,31 @@
+2026-03-18  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-make-tramp-hop-name): Use `thread-last'.
+	(tramp-completion-handle-file-directory-p): Use `tramp-prefix-format'.
+	(tramp-fnac-add-trailing-slash): New defvar.
+	(tramp-skeleton-file-name-all-completions): Handle also symlinked
+	directories.
+	(tramp-skeleton-directory-files): Use `tramp-fnac-add-trailing-slash'.
+	(tramp-handle-file-name-completion): Use `seq-difference'.
+	(tramp-handle-make-process): Handle "%w" format specifier.
+
+	* tramp-ftp.el (tramp-disable-ange-ftp): Use `seq-difference'.
+
+	* tramp-gvfs.el (tramp-gvfs-monitor-process-filter): Use `thread-last'.
+
+	* tramp-sh.el (tramp-sh-handle-insert-directory): Use `seq-difference'.
+	(tramp-sh-gio-monitor-process-filter): Use `thread-last'.
+
+	* tramp.el (tramp-skeleton-file-name-all-completions):
+	* tramp-adb.el (tramp-adb-handle-file-name-all-completions):
+	* tramp-crypt.el (tramp-crypt-handle-file-name-all-completions):
+	* tramp-fuse.el (tramp-fuse-handle-file-name-all-completions):
+	* tramp-gvfs.el (tramp-gvfs-handle-file-name-all-completions):
+	* tramp-sh.el (tramp-sh-handle-file-name-all-completions):
+	* tramp-smb.el (tramp-smb-handle-file-name-all-completions):
+	* tramp-sudoedit.el (tramp-sudoedit-handle-file-name-all-completions):
+	Simplify.
+
 2026-03-16  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-compat.el (tramp-compat-error-type-p): Rename from
