@@ -6345,8 +6345,11 @@ INPUT, if non-nil, is a string sent to the process."
 		   "echo foo >&2; echo bar" (current-buffer) stderr)
 		  (should (string-equal "bar\n" (buffer-string)))
 		  ;; Check stderr.
+		  ;; Some shells echo, for example the "adb" or container methods.
 		  (should
-		   (string-equal "foo\n" (tramp-get-buffer-string stderr))))
+		   (string-match-p
+		    (rx bol (** 1 2 "foo\n") eol)
+		    (tramp-get-buffer-string stderr))))
 
 	      ;; Cleanup.
 	      (ignore-errors (kill-buffer stderr))))))
