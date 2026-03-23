@@ -1,3 +1,8 @@
+2026-03-23  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-smb.el (tramp-smb-get-file-entries): Do not add virtual
+	entry ""; it isn't needed anymore.
+
 2026-03-18  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-make-tramp-hop-name): Use `thread-last'.

@@ -1741,9 +1741,6 @@ Result is a list of (LOCALNAME MODE SIZE MONTH DAY TIME YEAR)."
 	  (unless share
 	    (tramp-set-connection-property v "share-cache" res)))
 
-	;; Add directory itself.
-	(push '("" "drwxrwxrwx" 0 (0 0)) res)
-
 	;; Return entries.
 	(delq nil res)))))
 
@@ -2283,9 +2280,6 @@ SHARE will be passed to the call of `tramp-smb-get-localname'."
 ;;; TODO:
 
 ;; * Return more comprehensive file permission string.
-;;
-;; * Try to remove the inclusion of dummy "" directory.  Seems to be at
-;;   several places, especially in `tramp-smb-handle-insert-directory'.
 ;;
 ;; * Keep a separate connection process per share.
 ;;
