@@ -1,3 +1,9 @@
+2026-03-24  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-smb.el (tramp-smb-handle-copy-file): Suppress
+	`jka-compr-handler'.  Reported by Seppo Ronkainen
+	<sodr80@protonmail.com>.  (Bug#80667)
+
 2026-03-23  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-smb.el (tramp-smb-get-file-entries): Do not add virtual
