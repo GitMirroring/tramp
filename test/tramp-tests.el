@@ -6344,8 +6344,8 @@ INPUT, if non-nil, is a string sent to the process."
 		   this-shell-command
 		   "echo foo >&2; echo bar" (current-buffer) stderr)
 		  (should (string-equal "bar\n" (buffer-string)))
-		  ;; Check stderr.
-		  ;; Some shells echo, for example the "adb" or container methods.
+		  ;; Check stderr.  Some shells echo, for example the
+		  ;; "adb" or container methods.
 		  (should
 		   (string-match-p
 		    (rx bol (** 1 2 "foo\n") eol)
