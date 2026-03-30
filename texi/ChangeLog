@@ -1,5 +1,10 @@
 2026-03-30  Michael Albinus  <michael.albinus@gmx.de>
 
+	* tramp.texi (Extension packages): Explain how to use own format
+	specifiers.
+
+2026-03-30  Michael Albinus  <michael.albinus@gmx.de>
+
 	Version 2.8.1.3 released
 
 2026-02-27  Michael Albinus  <michael.albinus@gmx.de>
