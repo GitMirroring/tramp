@@ -1,3 +1,7 @@
+2026-04-04  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-expand-args): Handle ARGS being nil.
+
 2026-03-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-expand-args): Make DEFAULT argument optional.
