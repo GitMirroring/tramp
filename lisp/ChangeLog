@@ -1,3 +1,11 @@
+2026-04-04  Joseph Mingrone  <jrm@ftfl.ca>
+
+	* tramp.el (tramp-skeleton-file-name-all-completions):
+	Use `file-directory-p' directly instead of calling `file-symlink-p'
+	and file-truename first.  Since `file-directory-p' already follows
+	symlinks, symlinked directories are handled correctly without the
+	extra indirection.
+
 2026-04-04  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-expand-args): Handle ARGS being nil.
