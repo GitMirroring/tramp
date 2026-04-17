@@ -1,3 +1,11 @@
+2026-04-17  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el: Use consequently `eq', `assq', `memq'.
+	(tramp-file-name-for-operation-external): Extend docstring.
+	(tramp-file-name-for-operation): Make more use of
+	`tramp-file-name-for-operation-external'.
+	(tramp-add-external-operation): New optional argument `arg-type'.
+
 2026-04-07  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-cache.el (tramp-suppress-remote-file-name-inhibit-cache):
