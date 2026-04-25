@@ -1,6 +1,10 @@
+2026-04-25  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Customizing Methods): Add comment.
+
 2026-04-17  Michael Albinus  <michael.albinus@gmx.de>
 
-	* tramp.texi (Extension packages): Use a nother format char in example.
+	* tramp.texi (Extension packages): Use another format char in example.
 	(New operations): Document different argument types.  Extend example.
 
 2026-04-08  Michael Albinus  <michael.albinus@gmx.de>
