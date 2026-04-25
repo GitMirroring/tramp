@@ -1,3 +1,8 @@
+2026-04-25  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-open-connection-setup-interactive-shell):
+	Comment out setting `command-line-max-length', it doesn't work reliably.
+
 2026-04-19  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-multi-hop-p-hook): New defvar.
@@ -32,7 +37,7 @@
 
 	* tramp.el (tramp-skeleton-file-name-all-completions):
 	Use `file-directory-p' directly instead of calling `file-symlink-p'
-	and file-truename first.  Since `file-directory-p' already follows
+	and `file-truename' first.  Since `file-directory-p' already follows
 	symlinks, symlinked directories are handled correctly without the
 	extra indirection.
 
