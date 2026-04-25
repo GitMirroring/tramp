@@ -5238,7 +5238,7 @@ multi-hop capable.")
     (or (and (tramp-sh-file-name-handler-p vec)
 	     (tramp-get-method-parameter vec 'tramp-login-args))
 	(run-hook-with-args-until-success 'tramp-multi-hop-p-hook vec))))
-	
+
 (defun tramp-add-hops (vec)
   "Add ad-hoc proxy definitions to `tramp-default-proxies-alist'."
   ;; `tramp-default-proxies-alist' is bound to `tramp-cache-undefined'
