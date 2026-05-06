@@ -1,3 +1,7 @@
+2026-05-06  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test33-environment-variables): Adapt test.
+
 2026-05-04  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (ert-remote-temporary-file-directory):
