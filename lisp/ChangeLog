@@ -1,3 +1,8 @@
+2026-05-06  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-sh-handle-make-process): Handle loooong
+	environment variables.  (Bug#80783)
+
 2026-04-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.1.4 released
