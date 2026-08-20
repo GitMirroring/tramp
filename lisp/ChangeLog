@@ -1,3 +1,8 @@
+2026-08-20  Alexey Lebedev  <binarin@binarin.info>
+
+	* tramp.el (tramp-file-name-for-operation): Fix the case, that the
+	first argument is a process name.
+
 2026-06-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.2.1 released
@@ -524,7 +529,7 @@
 2025-10-14  Michael Albinus  <michael.albinus@gmx.de>
 
 	Do not use the ;;;###tramp-autoload cookie for defcustoms.  This
-	damages the customisation when Tramp is autoloaded.  Reported by
+	damages the customization when Tramp is autoloaded.  Reported by
 	Joel Reicher <joel.reicher@gmail.com>.
 
 	* tramp-cache.el (tramp-verbose): Declare.
