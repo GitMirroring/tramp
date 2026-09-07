@@ -1,3 +1,8 @@
+2026-09-07  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-open-shell): Improve check for
+	`tramp-histfile-override'.  (Bug#81622)
+
 2026-08-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.2.2 released
