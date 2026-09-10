@@ -1,7 +1,11 @@
+2026-09-10  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-open-shell): Avoid cascaded call of command.
+
 2026-09-07  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-open-shell): Improve check for
-	`tramp-histfile-override'.  (Bug#81622)
+	`tramp-histfile-override'.  (Bug#81799)
 
 2026-08-30  Michael Albinus  <michael.albinus@gmx.de>
 
