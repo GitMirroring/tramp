@@ -1,3 +1,8 @@
+2026-09-12  Filipp Gunbin  <fgunbin@fastmail.fm>
+
+	* tramp-sh.el (tramp-open-connection-setup-interactive-shell):
+	Handle proper coding system for APFS file system.  (Bug#81799)
+
 2026-09-10  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-open-shell): Avoid cascaded call of command.
