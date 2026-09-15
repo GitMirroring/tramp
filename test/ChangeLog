@@ -5,6 +5,7 @@
 	for macOS.  (Bug#81843)
 	(tramp-test41-special-characters, tramp-test42-utf8): Skip only
 	for `tramp--test-hfs-p', not for `tramp--test-macos-p'.
+	(tramp-test45-home-directory): Adapt test.
 
 2026-09-07  Michael Albinus  <michael.albinus@gmx.de>
 
