@@ -1,3 +1,11 @@
+2026-09-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp--test-hfs-p): New defun.
+	(tramp--test-check-files): Fix thinko.  Discriminate some tests
+	for macOS.  (Bug#81843)
+	(tramp-test41-special-characters, tramp-test42-utf8): Skip only
+	for `tramp--test-hfs-p', not for `tramp--test-macos-p'.
+
 2026-09-07  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-archive-tests.el (tramp-archive-test51-auto-load)
