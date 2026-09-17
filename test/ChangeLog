@@ -1,3 +1,7 @@
+2026-09-17  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test33-environment-variables): Adapt test.
+
 2026-09-15  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp--test-hfs-p): New defun.
