@@ -1,5 +1,126 @@
 2026-09-18  Michael Albinus  <michael.albinus@gmx.de>
 
+	Remove backward compatibility of Emacs 28
+
+	That is, use the following functions and variables:
+	`auth-source-netrc-parse-all', `directory-abbrev-apply',
+	`directory-abbrev-make-regexp', `ntake', `seq-keep', `seq-remove',
+	`seq-uniq', `string-blank-p', `string-equal-ignore-case',
+	`string-lines', `string-prefix-p', `string-split',
+	`string-suffix-p' and `take'.
+
+	* tramp.el (tramp-restricted-shell-hosts-alist)
+	(tramp-completion-handle-expand-file-name)
+	(tramp-completion-dissect-file-name)
+	(tramp-get-completion-methods, tramp-parse-auth-sources)
+	(tramp-parse-etc-group-group, tramp-parse-netrc)
+	(tramp-skeleton-directory-files)
+	(tramp-skeleton-directory-files-and-attributes)
+	(tramp-handle-abbreviate-file-name, tramp-add-hops)
+	(tramp-expand-args, tramp-handle-make-process)
+	(tramp-send-string, tramp-convert-file-attributes):
+	* tramp-adb.el (tramp-adb-parse-device-names)
+	(tramp-do-parse-file-attributes-with-ls)
+	(tramp-adb-sh-fix-ls-output, tramp-adb-get-signal-strings)
+	(tramp-adb-handle-exec-path):
+	* tramp-archive.el (tramp-archive-dissect-file-name)
+	(tramp-archive-handle-directory-files):
+	* tramp-cache.el (tramp-list-connections)
+	(tramp-parse-connection-properties):
+	* tramp-cmds.el (tramp-enable-method, tramp-bug)
+	(tramp-append-tramp-buffers):
+	* tramp-container.el (tramp-container--completion-function)
+	(tramp-kubernetes--completion-function)
+	(tramp-toolbox--completion-function)
+	(tramp-distrobox--completion-function)
+	(tramp-flatpak--completion-function)
+	(tramp-apptainer--completion-function)
+	(tramp-nspawn--completion-function):
+	* tramp-fuse.el (tramp-fuse-remove-hidden-files)
+	(tramp-fuse-mounted-p):
+	* tramp-gvfs.el (tramp-gvfs-dbus-string-to-byte-array)
+	(tramp-gvfs-handler-mounted-unmounted)
+	(tramp-gvfs-mount-spec-entry, tramp-gvfs-mount-spec)
+	(tramp-gvfs-maybe-open-connection)
+	(tramp-gvfs-parse-device-names):
+	* tramp-rclone.el (tramp-rclone-parse-device-names):
+	* tramp-sh.el (tramp-do-copy-or-rename-file-out-of-band)
+	(tramp-sh-handle-insert-directory)
+	(tramp-sh-handle-make-process, tramp-sh-get-signal-strings)
+	(tramp-sh-handle-file-notify-add-watch)
+	(tramp-sh-inotifywait-process-filter)
+	(tramp-open-connection-setup-interactive-shell)
+	(tramp-find-inline-compress, tramp-maybe-open-connection)
+	(tramp-get-remote-path, tramp-remote-inotifywait-with-P)
+	(tramp-get-inline-coding):
+	* tramp-smb.el (tramp-smb-notify-process-filter)
+	(tramp-smb-handle-insert-directory)
+	(tramp-smb-get-cifs-capabilities):
+	* tramp-sshfs.el (tramp-sshfs-handle-exec-path):
+	* tramp-sudoedit.el (tramp-sudoedit-handle-file-name-all-completions)
+	(tramp-sudoedit-handle-set-file-acl): Apply the changed functions.
+
+	* tramp-adb.el (tramp-adb-file-name-handler-alist):
+	* tramp-androidsu.el (tramp-androidsu-file-name-handler-alist):
+	* tramp-archive.el (tramp-archive-file-name-handler-alist):
+	* tramp-crypt.el (tramp-crypt-file-name-handler-alist):
+	* tramp-gvfs.el (tramp-gvfs-file-name-handler-alist):
+	* tramp-rclone.el (tramp-rclone-file-name-handler-alist):
+	* tramp-sh.el (tramp-sh-file-name-handler-alist):
+	* tramp-smb.el (tramp-smb-file-name-handler-alist):
+	* tramp-sshfs.el (tramp-sshfs-file-name-handler-alist):
+	* tramp-sudoedit.el (tramp-sudoedit-file-name-handler-alist):
+	Remove entries for `dired-compress-file' and `make-directory-internal'.
+
+	* tramp.el (netrc-parse): Don't declare.
+	(tramp-make-tramp-file-name, tramp-accept-process-output):
+	Remove old calling conventions.
+	(tramp-file-name-for-operation): Don't check for
+	`dired-compress-file' and `make-directory-internal'.
+	(tramp-handle-access-file): Use `permission-denied' error.
+	(tramp-handle-file-name-completion): Improve rx expression.
+	(tramp-handle-make-process): Use :filter argument.
+
+	* tramp-adb.el (process-file-return-signal-string): Don't declare.
+
+	* tramp-androidsu.el (tramp-androidsu-handle-make-process):
+	Use :filter argument.
+
+	* tramp-archive.el (tramp-archive-handle-copy-file):
+	Use `permission-denied' error.
+
+	* tramp-cmds.el (tramp-list-tramp-buffers)
+	(tramp-list-remote-buffers, tramp-append-tramp-buffers):
+	Use `match-buffers'.
+	(tramp-rename-files): Use `help-key'.
+
+	* tramp-compat.el (parse-time): Don't require.
+	(tramp-permission-denied, tramp-compat-permission-denied)
+	(tramp-compat-take, tramp-compat-ntake)
+	(tramp-compat-string-equal-ignore-case)
+	(tramp-compat-auth-source-netrc-parse-all)
+	(tramp-compat-seq-keep, connection-local-default-application):
+	Remove.
+
+	* tramp-crypt.el (tramp-crypt-send-command):
+	Use `with-environment-variables'.
+
+	* tramp-gvfs.el (and): Don't add `dbus-event' to
+	`while-no-input-ignore-events'.
+
+	* tramp-integration.el (eshell-path-env): Don't declare.
+	(tramp-eshell-directory-change): Remove. Don't add it to
+	`eshell-mode-hook' and `eshell-directory-change-hook'.
+
+	* tramp-sh.el (dired-compress-file, dired-remove-file): Don't declare.
+	(tramp-sh-handle-dired-compress-file): Remove.
+	(tramp-sh-handle-insert-directory): Don't insert free space.
+
+	* tramp-smb.el (tramp-smb-handle-insert-directory): Don't check
+	for `dired--insert-disk-space'.
+
+2026-09-18  Michael Albinus  <michael.albinus@gmx.de>
+
 	* tramp.el (tramp-dissect-file-name): Special handling of
 	`tramp-archive-method'.
 
