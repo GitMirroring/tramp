@@ -1,3 +1,25 @@
+2026-09-18  Michael Albinus  <michael.albinus@gmx.de>
+
+	* Makefile.in (SELECTOR): Change to (not (tag :unstable)).
+
+	* tramp-tests.el (completions-max-height): Don't declare.
+	(ert-remote-temporary-file-directory, ert-temp-file-prefix)
+	(ert-temp-file-suffix, ert--with-temp-file-generate-suffix)
+	(ert-with-temp-file, ert-with-temp-directory): Don't define.
+	(tramp--test-emacs29-p, tramp-test47-dired-compress-file)
+	(tramp-test47-dired-compress-dir): Remove.
+	(tramp-test07-abbreviate-file-name)
+	(tramp-test10-write-region-other-file-name-handler)
+	(tramp-test13-make-directory, tramp-test18-file-attributes)
+	(tramp-test27-load, tramp-test31-interrupt-process)
+	(tramp-test31-signal-process)
+	(tramp-test31-list-system-processes)
+	(tramp-test31-process-attributes, tramp-test31-memory-info)
+	(tramp-test32-shell-command-dont-erase-buffer)
+	(tramp-test39-make-lock-file-name, tramp--test-check-files)
+	(tramp-test42-utf8, tramp-test48-read-password)
+	(tramp-test48-read-otp-password, tramp-test53-unload): Adapt tests.
+
 2026-09-17  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test33-environment-variables): Adapt test.
