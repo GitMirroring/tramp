@@ -1,3 +1,8 @@
+2026-09-18  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-dissect-file-name): Special handling of
+	`tramp-archive-method'.
+
 2026-09-16  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-skeleton-expand-file-name): New defmacro.
