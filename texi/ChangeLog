@@ -1,3 +1,12 @@
+2026-09-18  Michael Albinus  <michael.albinus@gmx.de>
+
+	* trampelpa.texi (ELPA Installation): Remove instructions for
+	Emacs < 29.
+
+	* tramp.texi: Use setopt in examples.
+	(Frequently Asked Questions):
+	* trampinst.texi (Installation): Adapt supported Emacs versions.
+
 2026-09-16  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Home directories): Document tramp-tolerate-tilde.
