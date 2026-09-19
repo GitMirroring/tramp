@@ -1,3 +1,7 @@
+2026-09-19  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test05-expand-file-name-tilde): Adapt test.
+
 2026-09-18  Michael Albinus  <michael.albinus@gmx.de>
 
 	* Makefile.in (SELECTOR): Change to (not (tag :unstable)).
