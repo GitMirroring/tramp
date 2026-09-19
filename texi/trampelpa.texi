@@ -3,6 +3,9 @@
 @c Copyright (C) 2021-2026 Free Software Foundation, Inc.
 @c See file doclicense.texi for copying conditions.
 
+@c This file is the input for the Tramp ELPA README.
+@c makeinfo --plaintext --paragraph-indent=none -o README trampelpa.texi
+
 @include trampver.texi
 
 @node ELPA Installation
@@ -44,6 +47,13 @@ package, or if you use another major Emacs version than the version
 
 @example
 M-x package-recompile RET tramp
+@end example
+
+If you want to recompile all installed packages (including
+@value{tramp}) after changing the major Emacs version, you must call:
+
+@example
+M-x package-recompile-all
 @end example
 
 @subheading Mitigation of a bug in Emacs 29.1

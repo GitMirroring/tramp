@@ -1,3 +1,10 @@
+2026-09-19  Michael Albinus  <michael.albinus@gmx.de>
+
+	* trampelpa.texi (ELPA Installation): Mention also package-recompile-all.
+
+	* trampinst.texi (Recompilation): Recommend package-recompile
+	instead of tramp-recompile-elpa.
+
 2026-09-18  Michael Albinus  <michael.albinus@gmx.de>
 
 	* trampelpa.texi (ELPA Installation): Remove instructions for
