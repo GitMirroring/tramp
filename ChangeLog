@@ -1,9 +1,12 @@
+2026-09-19  Michael Albinus  <michael.albinus@gmx.de>
+
+	* INSTALL: Regenerate.
+
 2026-09-18  Michael Albinus  <michael.albinus@gmx.de>
 
 	* configure.ac: Bump version (to 2.9.0-pre).
 	(EMACS_REQUIRED_VERSION): Bump version (to 29.1).
 
-	* INSTALL: Regenerate.
 
 2026-07-01  Michael Albinus  <michael.albinus@gmx.de>
 

@@ -155,8 +155,8 @@ least the Tramp Lisp files.  You must apply the following steps:
           $ make install
 
 If you have installed Tramp as GNU ELPA package, you can recompile it
-with the Emacs version you are running by the command ‘M-x
-tramp-recompile-elpa <RET>’.
+with the Emacs version you are running by the command
+‘M-x package-recompile <RET> tramp <RET>’.
 
 A test suite for Tramp
 ======================
@@ -204,6 +204,11 @@ use another major Emacs version than the version Tramp has been
 installed with, you must recompile the package:
 
      M-x package-recompile RET tramp
+
+If you want to recompile all installed packages (including Tramp) after
+changing the major Emacs version, you must call:
+
+     M-x package-recompile-all
 
 Mitigation of a bug in Emacs 29.1
 ---------------------------------
