@@ -1,3 +1,9 @@
+2026-09-19  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-cmds.el (tramp-recompile-elpa-command-completion-p): Remove.
+	(tramp-recompile-elpa): Change `completetion' declaration.
+	Mark it obsolete.
+
 2026-09-18  Michael Albinus  <michael.albinus@gmx.de>
 
 	Remove backward compatibility of Emacs 28
