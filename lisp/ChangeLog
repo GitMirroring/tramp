@@ -1,3 +1,7 @@
+2026-09-27  Michael Albinus  <michael.albinus@gmx.de>
+
+	* Makefile.in (EMACS_LOADDEFS): Use loaddefs-gen.
+
 2026-09-26  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-method-regexp): Fix docstring.
