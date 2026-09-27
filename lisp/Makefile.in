@@ -56,6 +56,9 @@ ELC_FILES	= $(addsuffix .elc, $(basename $(LISP_FILES)))
 INSTALL_FILES	= $(LISP_FILES) tramp-loaddefs.el			\
 		  $(ELC_FILES) tramp-loaddefs.elc
 EM		= $(EMACS) -Q -batch -L $(builddir)
+# loaddefs-gen.el exists since Emacs 29.1.
+EMACS_LOADDEFS	:= $(strip $(shell $(EM)				\
+		     --eval '(print (locate-library "loaddefs-gen"))'))
 
 .PHONY: all autoloads install clean distclean tramp
 
@@ -65,12 +68,16 @@ all: autoloads $(ELC_FILES)
 
 autoloads: $(builddir)/tramp-loaddefs.el
 $(builddir)/tramp-loaddefs.el: $(LISP_FILES)
+ifneq   "$(EMACS_LOADDEFS)" "nil"
+	$(EM) -l loaddefs-gen -f loaddefs-generate-batch $(notdir $@) .
+else
 	$(EM) -l autoload						    \
 	  --eval "(setq generate-autoload-cookie \";;;###tramp-autoload\")" \
 	  --eval "(setq generated-autoload-file				    \
 		    (expand-file-name \"tramp-loaddefs.el\"))"		    \
 	  --eval "(setq make-backup-files nil)"				    \
 	  -f batch-update-autoloads .
+endif
 	$(EM) -l bytecomp -f batch-byte-compile $(notdir $@)
 
 %.elc: %.el
