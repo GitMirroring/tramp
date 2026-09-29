@@ -1,3 +1,7 @@
+2026-09-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	Version 2.8.2.3 released
+
 2026-09-26  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (FUSE-based methods): Fix wording.
@@ -21,7 +25,7 @@
 
 	* tramp.texi (Auto-save File Lock and Backup): Adapt example.
 
-2026-06-29  Michael Albinus  <michael.albinus@gmx.de>
+2026-07-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.2.1 released
 

@@ -1,3 +1,7 @@
+2026-09-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	Version 2.8.2.3 released
+
 2026-09-27  Michael Albinus  <michael.albinus@gmx.de>
 
 	* Makefile.in (EMACS_LOADDEFS): New variable.
@@ -81,7 +85,7 @@
 	* tramp.el (tramp-file-name-for-operation): Fix the case, that the
 	first argument is a process name.
 
-2026-06-29  Michael Albinus  <michael.albinus@gmx.de>
+2026-07-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.2.1 released
 
