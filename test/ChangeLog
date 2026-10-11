@@ -1,3 +1,9 @@
+2026-10-11  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test02-file-name-dissect)
+	(tramp-test02-file-name-dissect-simplified)
+	(tramp-test02-file-name-dissect-separate): Extend tests.
+
 2026-09-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.2.3 released
