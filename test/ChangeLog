@@ -1,3 +1,8 @@
+2026-10-19  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-bundle-read-file-names): Declare.
+	(tramp-test35-remote-path): Extend test.
+
 2026-10-11  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test02-file-name-dissect)
