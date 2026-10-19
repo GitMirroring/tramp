@@ -1,3 +1,11 @@
+2026-10-19  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-bundle-read-file-names): Expand tilde and
+	environment variables.  Adapt docstring.
+	(tramp-bundle-read-file-names): New optional argument EXPAND.
+	Return list of (expanded) file names.
+	(tramp-get-remote-path): Rearrange the code.  (Bug#82027)
+
 2026-10-11  Michael Albinus  <michael.albinus@gmx.de>
 
 	Reported by Wonyoung Jung <wonyoung.jung@78researchlab.com> of
@@ -11,7 +19,7 @@
 	(tramp-archive-connection-local-default-variables): New defconst.
 	Add it to connection-local profiles.
 
-	This is CVE-2026-79992.
+	This is CVE-2026-108976.
 
 2026-10-02  Michael Albinus  <michael.albinus@gmx.de>
 
