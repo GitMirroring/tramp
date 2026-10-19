@@ -1,3 +1,11 @@
+2026-10-19  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-bundle-read-file-names): Expand tilde and
+	environment variables.  Adapt docstring.
+	(tramp-bundle-read-file-names): New optional argument EXPAND.
+	Return list of (expanded) file names.
+	(tramp-get-remote-path): Rearrange the code.  (Bug#82027)
+
 2026-10-18  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-skeleton-expand-file-name): Improve tilde handling.
