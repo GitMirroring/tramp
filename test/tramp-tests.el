@@ -2585,6 +2585,8 @@ being the result.")
 			  (expand-file-name (concat dir "/:~does-not-exist"))))
 
     ;; TODO: Make it work.
+    ;; It shall work for tramp-rpc once it uses
+    ;; `tramp-skeleton-expand-file-name'.
     (unless (or (tramp--test-rpc-p) (tramp--test-smb-p) (tramp--test-sudoedit-p))
       (setq tramp-tolerate-tilde nil)
       (should-error
