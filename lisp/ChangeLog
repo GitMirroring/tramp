@@ -1,3 +1,9 @@
+2026-10-22  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-sh-handle-make-process)
+	(tramp-open-connection-setup-interactive-shell): Fix problem with
+	environment variables which contain "=".  (Bug#82086)
+
 2026-10-21  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-bundle-read-file-names): Adapt script.  (Bug#82080)
