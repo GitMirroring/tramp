@@ -1,3 +1,8 @@
+2026-10-25  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-container.el (tramp-container--completion-function):
+	Quote the shell command.  (Bug#82096)
+
 2026-10-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-sh-handle-make-process)
