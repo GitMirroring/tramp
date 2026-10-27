@@ -1,3 +1,10 @@
+2026-10-27  Michael Albinus  <michael.albinus@gmx.de>
+
+	* Makefile.in (SELECTOR): Change to (not (tag :unstable)).
+
+	* tramp-tests.el (tramp--test-rpc-p): New defun.
+	(tramp-test18-file-attributes): Extend test.
+
 2026-10-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test33-environment-variables): Adapt test.

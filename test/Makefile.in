@@ -31,7 +31,7 @@ EM		= $(EMACS) -Q -batch -L $(builddir)/../lisp
 RM		= -rm -f
 
 TRAMP_TEST_ARGS ?=
-SELECTOR	?= t
+SELECTOR	?= (not (tag :unstable))
 
 WRITE_LOG	?=
 

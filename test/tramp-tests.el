@@ -4103,14 +4103,16 @@ This tests also `access-file', `file-readable-p',
 	    (write-region "foo" nil tmp-name1)
 	    ;; `access-file' returns nil in case of success.
 	    (should-not (access-file tmp-name1 "error"))
-	    ;; `access-file' could use a timeout.
-	    (let ((remote-file-name-access-timeout 1)
-		  comp-warn-primitives)
-	      (cl-letf (((symbol-function #'file-exists-p)
-			 (lambda (_filename) (sleep-for 5))))
-		(should-error
-		 (access-file tmp-name1 "error")
-		 :type 'file-error)))
+	    ;; `access-file' could use a timeout.  tramp-rpc.el
+	    ;; doesn't use `file-exists-p' in its implementation.
+	    (unless (tramp--test-rpc-p)
+	      (let ((remote-file-name-access-timeout 1)
+		    comp-warn-primitives)
+		(cl-letf (((symbol-function #'file-exists-p)
+			   (lambda (_filename) (sleep-for 5))))
+		  (should-error
+		   (access-file tmp-name1 "error")
+		   :type 'file-error))))
 	    (delete-file tmp-name1)
 
 	    ;; A sticky bit could damage the `file-ownership-preserved-p' test.
@@ -7857,8 +7859,7 @@ This does not support some special file names."
 (defun tramp--test-container-oob-p ()
   "Check, whether the dockercp or podmancp method is used.
 They does not support wildcard copy."
-  (string-match-p
-   (rx bol (| "dockercp" "podmancp") eol)
+  (string-match-p (rx bol (| "dockercp" "podmancp") eol)
    (file-remote-p ert-remote-temporary-file-directory 'method)))
 
 (defun tramp--test-crypt-p ()
@@ -7976,6 +7977,12 @@ This does not support connection share for more than two connections."
   "Check, whether the remote host is offered by rclone.
 This requires restrictions of file name syntax."
   (tramp-rclone-file-name-p ert-remote-temporary-file-directory))
+
+(defun tramp--test-rpc-p ()
+  "Check, whether the rpc method is used."
+  ;; tramp-rpc.el does not belong to proper Tramp.
+  (tramp-compat-funcall 'tramp-rpc-file-name-p
+    ert-remote-temporary-file-directory))
 
 (defun tramp--test-rsync-p ()
   "Check, whether the rsync method is used.
