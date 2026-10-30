@@ -1,3 +1,15 @@
+2026-10-30  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-cache.el (tramp-dump-connection-properties): Don't check
+	for "started" property.
+
+	* tramp-cmds.el (tramp-list-tramp-buffers):  List also ftp buffers.
+
+	* tramp-ftp.el (ange-ftp-ftp-process-buffer): Declare.
+	(tramp-ftp-file-name-handler): Use " connected" connection property.
+	(tramp-ftp-cleanup-connection): New defun.  Add it to
+	`tramp-cleanup-connection-hook'.
+
 2026-10-25  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-container.el (tramp-container--completion-function):
