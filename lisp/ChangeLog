@@ -1,3 +1,9 @@
+2026-11-02  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-methods): Fix docstring.
+	(tramp-handle-make-process): Call `tramp-ssh-or-plink-options'.
+	(Bug#82164)
+
 2026-10-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-cache.el (tramp-dump-connection-properties): Don't check
