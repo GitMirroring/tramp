@@ -1,3 +1,7 @@
+2026-11-08  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Remote processes): Mention QUOTING_STYLE.
+
 2026-10-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.2.4 released
