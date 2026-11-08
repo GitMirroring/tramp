@@ -1,3 +1,16 @@
+2026-11-08  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-convert-file-attributes): Adapt regexp for symlink.
+
+	* tramp-sh.el (tramp-open-shell): Use "QUOTING_STYLE=literal".
+	(Bug#82170)
+	(tramp-get-remote-stat): Better detection of GNU stat.
+
+	* tramp-sudoedit.el (tramp-methods) <sudoedit>:
+	Adapt `tramp-sudo-login' argument.
+	(tramp-sudoedit-handle-file-attributes)
+	(tramp-sudoedit-handle-file-name-all-completions): Adapt command.
+
 2026-11-02  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-methods): Fix docstring.
