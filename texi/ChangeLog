@@ -1,3 +1,8 @@
+2026-11-09  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Frequently Asked Questions): afp and archive have
+	been disabled in GNOME 51.
+
 2026-11-08  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Remote processes): Mention QUOTING_STYLE.
