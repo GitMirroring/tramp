@@ -1,3 +1,8 @@
+2026-11-09  Michael Albinus  <michael.albinus@gmx.de>
+
+	* trampver.el.in (customize-package-emacs-version-alist):
+	Change Tramp version integrated in Emacs 31.2.
+
 2026-11-08  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-convert-file-attributes): Adapt regexp for symlink.
