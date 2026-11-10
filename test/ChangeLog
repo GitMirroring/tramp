@@ -1,3 +1,8 @@
+2026-11-10  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (auto-revert-notify-watch-descriptor): Don't declare.
+	(tramp-test30-make-process): Adapt test.
+
 2026-11-01  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test14-delete-directory)
