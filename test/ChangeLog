@@ -1,3 +1,21 @@
+2026-11-11  Michael Albinus  <michael.albinus@gmx.de>
+
+	* Makefile.in (TESTS):
+	* README: Remove tramp-archive.el.
+
+	* tramp-archive-tests.el:
+	* resources/baz.tar:
+	* resources/foo.hrd:
+	* resources/foo.lnk:
+	* resources/foo.txt:
+	* resources/foo.zip:
+	* resources/bar/bar:
+	* resources/foo.iso/foo: Remove.
+
+	* tramp-tests.el (tramp--test-gdrive-p): Remove.
+	(tramp-test07-file-exists-p, tramp--test-share-p)
+	(tramp-test42-utf8, tramp-test53-unload): Adapt tests.
+
 2026-11-10  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (auto-revert-notify-watch-descriptor): Don't declare.
