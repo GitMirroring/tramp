@@ -1,3 +1,12 @@
+2026-11-11  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Top, Usage): Remove menue entry "Archive file names".
+	(Quick Start Guide, GVFS-based methods, FUSE-based methods)
+	(Home directories, Frequently Asked Questions): Remove "afp" and
+	"gdrive".
+	(File name syntax): Remove tramp-archive example.
+	(Archive file names): Remove.
+
 2026-11-08  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Remote processes): Mention QUOTING_STYLE.
