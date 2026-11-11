@@ -1,3 +1,28 @@
+2026-11-11  Michael Albinus  <michael.albinus@gmx.de>
+
+	* Makefile.in (LISP_FILES): Don't add tramp-archive.el.
+
+	* tramp-archive.el: Remove.
+
+	* tramp.el (tramp-dissect-file-name, tramp-make-tramp-file-name)
+	(tramp-autoload-file-name-handler)
+	(tramp-register-file-name-handlers, tramp-unload-hook): Don't care
+	about `tramp-archive'.
+
+	* tramp-cache.el (tramp-dump-connection-properties): Don't care
+	about `tramp-archive-method'.
+
+	* tramp-ftp.el (tramp-ftp-file-name-handler): Don't care about
+	`tramp-archive-file-name-handler'.
+
+	* tramp-gvfs.el (tramp-gvfs-methods, tramp-goa-methods)
+	(tramp-gvfs-get-directory-attributes)
+	(tramp-gvfs-get-file-attributes, tramp-gvfs-activation-uri)
+	(tramp-gvfs-handler-mounted-unmounted)
+	(tramp-gvfs-connection-mounted-p, tramp-gvfs-mount-spec)
+	(tramp-gvfs-maybe-open-connection, tramp-get-goa-accounts)
+	(top): Remove "afp" and "gdrive".
+
 2026-11-09  Michael Albinus  <michael.albinus@gmx.de>
 
 	* trampver.el.in (customize-package-emacs-version-alist):

@@ -47,9 +47,9 @@ LISP_FILES	= trampver.el tramp-compat.el tramp.el tramp-adb.el	\
 		  tramp-rclone.el tramp-sh.el tramp-smb.el		\
 		  tramp-sshfs.el tramp-sudoedit.el tramp-uu.el
 
-# tramp-archive.el, tramp-gvfs.el need dbus.
+# tramp-gvfs.el needs dbus.
 ifeq ($(EMACS_GVFS), yes)
-  LISP_FILES += tramp-archive.el tramp-gvfs.el
+  LISP_FILES += tramp-gvfs.el
 endif
 
 ELC_FILES	= $(addsuffix .elc, $(basename $(LISP_FILES)))
