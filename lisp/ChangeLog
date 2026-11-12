@@ -1,3 +1,7 @@
+2026-11-12  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-skeleton-make-process): Check also COMMAND arguments.
+
 2026-11-09  Michael Albinus  <michael.albinus@gmx.de>
 
 	* trampver.el.in (customize-package-emacs-version-alist):
