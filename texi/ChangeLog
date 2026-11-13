@@ -1,4 +1,10 @@
-2026-11-11  Michael Albinus  <michael.albinus@gmx.de>
+2026-11-13  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Predefined connection information):
+	Mention "connection-timeout".
+
+2026-11-09  Michael Albinus  <michael.albinus@gmx.de>
+>>>>>>> cbced450 (* tramp.texi (Predefined connection information):)
 
 	* tramp.texi (Top, Usage): Remove menue entry "Archive file names".
 	(Quick Start Guide, GVFS-based methods, FUSE-based methods)
