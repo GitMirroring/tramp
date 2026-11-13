@@ -1,3 +1,16 @@
+2026-11-13  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-androidsu.el (tramp-androidsu-maybe-open-connection):
+	Use proper timeout.
+
+	* tramp-rclone.el (tramp-methods) <rclone>:
+	Add `tramp-connection-timeout'.
+	(tramp-rclone-maybe-open-connection): Wait for mount.
+
+	* tramp-sshfs.el (tramp-methods) <sshfs>:
+	Add `tramp-connection-timeout'.  Use it in `tramp-mount-args'.
+	(tramp-sshfs-maybe-open-connection): Use `tramp-connection-timeout'.
+
 2026-11-12  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-skeleton-make-process): Check also COMMAND arguments.
