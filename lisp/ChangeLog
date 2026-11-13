@@ -1,3 +1,9 @@
+2026-11-13  Michelangelo Rodriguez  <michelangelo.rodriguez@gmail.com>
+
+	* tramp-rclone.el (tramp-rclone-maybe-open-connection):
+	Use `start-process' instead of `call-process'.  Delete process in
+	case of error.
+
 2026-11-13  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-androidsu.el (tramp-androidsu-maybe-open-connection):
