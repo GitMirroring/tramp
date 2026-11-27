@@ -1,3 +1,7 @@
+2026-11-27  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-rclone.el (tramp-rclone-send-command): Add comment.
+
 2026-11-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-message.el (tramp-get-trace-file-name)
