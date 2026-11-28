@@ -159,7 +159,7 @@ It has the same meaning as `remote-file-name-inhibit-cache'.")
 	 tramp-compat-temporary-file-directory))))
 
 (defun tramp-fuse-mounted-p (vec)
-  "Check, whether fuse volume determined by VEC is mounted."
+  "Check, whether FUSE volume determined by VEC is mounted."
   ;; Remember the mount status by using a file property on "/",
   ;; instead of using a connection property, because a file property
   ;; has a timeout.  Having a timeout lets us regularly recheck the
@@ -204,10 +204,10 @@ It has the same meaning as `remote-file-name-inhibit-cache'.")
 	(executable-find "fusermount"))))
 
 (defvar tramp-fuse-mount-points nil
-  "List of fuse volume determined by a VEC.")
+  "List of accumulated FUSE volumes.")
 
 (defun tramp-fuse-unmount (vec)
-  "Unmount fuse volume determined by VEC."
+  "Unmount FUSE volume determined by VEC."
   (let ((default-directory tramp-compat-temporary-file-directory))
     ;; Check, whether there is still a mount process.  Kill it.
     ;; Starting with Emacs 29.1, we can use `while-let'.
@@ -269,20 +269,20 @@ It has the same meaning as `remote-file-name-inhibit-cache'.")
 	  (tramp-fuse-mount-point v)))))))
 
 (defcustom tramp-fuse-unmount-on-cleanup nil
-  "Whether fuse volumes shall be unmounted on cleanup."
+  "Whether FUSE volumes shall be unmounted on cleanup."
   :group 'tramp
   :version "28.1"
   :type 'boolean
   :link '(info-link :tag "Tramp manual" "(tramp) FUSE setup"))
 
 (defun tramp-fuse-cleanup (vec)
-  "Cleanup fuse volume determined by VEC."
+  "Cleanup FUSE volume determined by VEC."
   (and tramp-fuse-unmount-on-cleanup
        (member (tramp-file-name-unify vec) tramp-fuse-mount-points)
        (tramp-fuse-unmount vec)))
 
 (defun tramp-fuse-cleanup-all ()
-  "Unmount all fuse volumes used by Tramp."
+  "Unmount all FUSE volumes used by Tramp."
   (and tramp-fuse-unmount-on-cleanup
        (mapc #'tramp-fuse-unmount tramp-fuse-mount-points)))
 
